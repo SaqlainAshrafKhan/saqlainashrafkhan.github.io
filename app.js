@@ -1,7 +1,7 @@
 
 // Show disclaimer alert on page load
 function disclaimerAlert() {
-    alert("Message from Owner: Hi, Thank you for visiting my portfolio. This website is currently under maintenance, some features might not work!");
+    alert("Message from Owner: Hi, Thank you for visiting my portfolio. This Portfolio is a work in progress, and I am continuously updating it. If you have any suggestions or feedback, please feel free to reach out! Also, please note that the portfolio is hosted on GitHub Pages, and some features may not work as expected due to CORS restrictions and no Backend Code. I am working on resolving these issues. Thank you for your understanding!");
 }
 
 // Get important elements
