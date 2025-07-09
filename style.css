@@ -192,7 +192,7 @@ root {
     left: 60px;
 }
 
-.about-left h4 {
+.about-left h1 {
     font-size: 42px;
     /*position:absolute;*/
     /*top:140px;*/
@@ -208,7 +208,7 @@ root {
     display: inline-block;
 }
 
-.about-left h3 span  {
+.about-left h3 span {
     color: rgb(255, 255, 83);
 }
 
@@ -299,7 +299,7 @@ root {
     color: rgb(153, 152, 154);
 }
 
-.about-me-card p span  {
+.about-me-card p span {
     color: white;
     font-size: 16px;
 }
@@ -703,7 +703,7 @@ footer p {
     text-align: center;
 }
 
-footer p  span  {
+footer p span {
     color: rgb(255, 255, 83);
     ;
 }
@@ -835,11 +835,11 @@ footer p  span  {
         font-size: 20px;
     }
 
-    .about-me-card-mobile p span  {
+    .about-me-card-mobile p span {
         font-size: 20px;
     }
 
-    .contact-right  input {
+    .contact-right input {
         height: 24px;
     }
 
