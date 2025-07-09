@@ -714,6 +714,7 @@ contact-left {
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
+    margin-top: 120px;
 }
 
 .follow-up-containers img:hover {
