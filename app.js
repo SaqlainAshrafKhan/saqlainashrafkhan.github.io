@@ -7,19 +7,19 @@ function disclaimerAlert() {
 // Get important elements
 const skillsSection = document.getElementById('skills-container');
 const aboutSection = document.getElementById('about-container');
-const themeBtn = document.getElementById('theme-toggle-btn');
+const navRight = document.getElementById('nav-right');
 
 // Scroll event for theme button position
 window.addEventListener('scroll', function () {
-    if (!skillsSection || !aboutSection || !themeBtn) return;
+    if (!skillsSection || !aboutSection || !navRight) return;
     const skillsSectionStart = skillsSection.getBoundingClientRect().top + window.scrollY;
     const aboutSectionStart = aboutSection.getBoundingClientRect().top + window.scrollY;
     const scrollPosition = window.scrollY;
 
     if (scrollPosition + 1 >= skillsSectionStart) {
-        themeBtn.style.marginRight = '60px';
+        navRight.style.marginRight = '60px';
     } else if (scrollPosition >= aboutSectionStart) {
-        themeBtn.style.marginRight = '400px';
+        navRight.style.marginRight = '400px';
     }
 });
 
