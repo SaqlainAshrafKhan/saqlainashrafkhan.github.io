@@ -780,6 +780,11 @@ footer p span {
         display: none;
     }
 
+    #info-btn{
+        position: absolute;
+        right: 50px;
+    }
+
     .about-left {
         gap: 12px;
         padding: 0;
