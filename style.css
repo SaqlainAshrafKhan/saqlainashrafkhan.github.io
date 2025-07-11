@@ -407,7 +407,7 @@ root {
     /*font-weight:lighter;*/
 }
 
-.skillsli {
+.skills li {
     /*position:absolute;*/
     /*top:;*/
     list-style: none;
@@ -418,6 +418,10 @@ root {
     Flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.skill p{
+    white-space: nowrap;
 }
 
 .skill img {
@@ -873,6 +877,19 @@ footer p span {
 
     .contact-right input {
         height: 24px;
+    }
+
+    .flex{
+        overflow-x: scroll;
+        gap: 10px;
+    }
+
+    .flex::-webkit-scrollbar-track, .flex::-webkit-scrollbar-thumb{
+        display: none;
+    }
+
+    .follow-up-container{
+        margin-top: 0;
     }
 
     .skill img {
