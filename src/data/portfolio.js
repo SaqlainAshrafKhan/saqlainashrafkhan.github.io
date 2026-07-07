@@ -76,6 +76,14 @@ export const products = [
     status: 'SaaS Platform',
     live: '',
     github: '',
+    coverImage: '/products/nexus/cover.png',
+    images: [
+      {
+        src: '/products/nexus/cover.png',
+        title: 'Concept Product Cover',
+        description: 'A safe visual summary of Nexus as a real estate and finance ERP without exposing private business data or internal workflows.',
+      },
+    ],
     highlights: ['Financial analytics', 'Investment tracking', 'Operational reporting', 'Role-ready architecture'],
     sections: {
       problem:
