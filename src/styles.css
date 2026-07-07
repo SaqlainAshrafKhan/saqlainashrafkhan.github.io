@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+::selection {
+  background: #7dd3c7;
+  color: #07080d;
+}
+
+.icon-link {
+  display: inline-grid;
+  height: 3rem;
+  width: 3rem;
+  place-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgb(0 0 0 / 0.1);
+  background: rgb(255 255 255 / 0.82);
+  color: rgb(39 39 42);
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.icon-link:hover {
+  transform: translateY(-2px);
+  background: rgb(244 244 245);
+}
+
+.dark .icon-link {
+  border-color: rgb(255 255 255 / 0.1);
+  background: rgb(255 255 255 / 0.1);
+  color: white;
+}
+
+.dark .icon-link:hover {
+  background: rgb(255 255 255 / 0.15);
+}
