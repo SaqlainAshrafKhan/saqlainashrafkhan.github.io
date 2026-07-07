@@ -68,7 +68,7 @@ export default function App() {
           </div>
         </section>
 
-        <Section id="products" eyebrow="Featured Products" title="Product work shaped around real business problems." description="Each project is framed around a problem, workflow, architecture, user experience, and product direction. The goal is to show how I think, not only what technologies I used.">
+        <Section id="products" eyebrow="Featured Products" title="Product work shaped around real business problems." description="A selection of products built around business workflows, user experience, architecture, and practical delivery.">
           <div className="grid gap-6 md:grid-cols-2">
             {products.map((product) => <ProductCard key={product.slug} product={product} />)}
           </div>
@@ -217,4 +217,5 @@ export default function App() {
     </div>
   );
 }
+
 
