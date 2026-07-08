@@ -11,6 +11,7 @@ import { applyTheme, getInitialTheme } from './utils/theme';
 export default function App() {
   const [theme, setTheme] = useState(getInitialTheme);
   const [solidNav, setSolidNav] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
 
   useEffect(() => {
     applyTheme(theme);
@@ -24,7 +25,12 @@ export default function App() {
   }, []);
 
   const copyEmail = async () => {
-    await navigator.clipboard.writeText(profile.email);
+    try {
+      await navigator.clipboard.writeText(profile.email);
+    } finally {
+      setEmailCopied(true);
+      window.setTimeout(() => setEmailCopied(false), 1800);
+    }
   };
 
   return (
@@ -176,8 +182,18 @@ export default function App() {
 
         <Section id="contact" eyebrow="Contact" title="Open to remote opportunities and product-focused engineering roles.">
           <div className="grid gap-4 md:grid-cols-2">
+            <div className="flex items-center gap-4 rounded-2xl border border-black/10 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-white/[0.06]">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-zinc-950 text-mint dark:bg-white/10"><Mail size={20} /></span>
+              <div className="min-w-0 flex-1">
+                <p className="text-sm text-zinc-500 dark:text-zinc-400">Email</p>
+                <a href={`mailto:${profile.email}`} className="break-words font-semibold transition hover:text-mint">{profile.email}</a>
+              </div>
+              <button onClick={copyEmail} className="inline-flex shrink-0 items-center gap-2 rounded-full border border-black/10 px-3 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100 dark:border-white/10 dark:text-zinc-200 dark:hover:bg-white/10" aria-label="Copy email address">
+                <Copy size={16} />
+                <span>{emailCopied ? 'Copied' : 'Copy'}</span>
+              </button>
+            </div>
             {[
-              { icon: Mail, label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
               { icon: Phone, label: 'Phone', value: profile.phone, href: `tel:${profile.phone.replaceAll(' ', '')}` },
               { icon: Linkedin, label: 'LinkedIn', value: 'Connect on LinkedIn', href: profile.linkedin },
               { icon: Github, label: 'GitHub', value: 'View GitHub', href: profile.github },
@@ -196,15 +212,6 @@ export default function App() {
               );
             })}
           </div>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <button onClick={copyEmail} className="inline-flex items-center gap-2 rounded-full bg-zinc-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-zinc-800 dark:bg-white dark:text-ink dark:hover:bg-zinc-200">
-              <Copy size={17} />
-              Copy Email
-            </button>
-            <a href={profile.meeting} className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-5 py-3 text-sm font-semibold text-zinc-800 transition hover:bg-zinc-100 dark:border-white/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/15">
-              Schedule Meeting
-            </a>
-          </div>
         </Section>
       </main>
       <footer className="border-t border-black/10 py-8 dark:border-white/10">
@@ -217,5 +224,7 @@ export default function App() {
     </div>
   );
 }
+
+
 
 

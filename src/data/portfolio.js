@@ -321,9 +321,11 @@ export const experience = {
     'Spring Boot',
     'REST APIs',
     'Automation Testing',
+    'Manual Testing',
     'Jira Integration',
     'Enterprise Applications',
     'Production Support',
     'Agile',
   ],
 };
+
