@@ -40,7 +40,7 @@ export default function ProductPage() {
           Back to Products
         </Link>
         <div className={`overflow-hidden rounded-[2rem] border border-black/10 bg-gradient-to-br ${product.accent} p-6 shadow-soft dark:border-white/10 sm:p-8`}>
-          <div className="rounded-[1.5rem] bg-zinc-950/86 p-6 text-white backdrop-blur-xl sm:p-10">
+          <div className="rounded-[1.5rem] border border-white/10 bg-zinc-950 p-6 text-white shadow-line sm:p-10">
             <p className="mb-5 inline-flex rounded-full bg-white/10 px-3 py-1 text-sm text-zinc-200">{product.status}</p>
             <h1 className="font-display text-5xl font-semibold sm:text-7xl">{product.name}</h1>
             <p className="mt-4 text-xl text-mint">{product.tagline}</p>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function ProductCard({ product }) {
   return (
     <article className="group overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-soft dark:border-white/10 dark:bg-white/[0.06]">
-      <div className={`bg-gradient-to-br ${product.accent} p-5`}>
+      <Link to={`/products/${product.slug}`} className={`block bg-gradient-to-br ${product.accent} p-5`} aria-label={`Open ${product.name} details`}>
         <div className="relative flex aspect-[16/9] min-h-60 flex-col justify-between overflow-hidden rounded-2xl border border-white/35 bg-zinc-950/80 p-5 text-white shadow-line backdrop-blur-xl sm:min-h-64">
           {product.coverImage && (
             <img
@@ -24,7 +24,7 @@ export default function ProductCard({ product }) {
             <p className="mt-2 text-sm text-zinc-300">{product.tagline}</p>
           </div>
         </div>
-      </div>
+      </Link>
       <div className="p-6">
         <p className="leading-7 text-zinc-600 dark:text-zinc-300">{product.description}</p>
         <div className="mt-5 flex flex-wrap gap-2">
@@ -55,4 +55,3 @@ export default function ProductCard({ product }) {
     </article>
   );
 }
-
